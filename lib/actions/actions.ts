@@ -92,13 +92,24 @@ export {getWoodBurnings, getWoodBurningDetails };
 
 
 const getSearchedItems = async (query: string) => {
-  const searchedCrochets = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/crochets/${query}`).then(res => res.json());
-  const searchedDrawings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/drawings/${query}`).then(res => res.json());
-  const searchedJewelries = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/jewelries/${query}`).then(res => res.json());
-  const searchedPaintings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/paintings/${query}`).then(res => res.json());
-  const searchedTattoos = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/tattoos/${query}`).then(res => res.json());
-  const searchedWearables = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/wearables/${query}`).then(res => res.json());
-  const searchedWoodBurnings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/woodburnings/${query}`).then(res => res.json());
+  const fetchAndLog = async (url: string) => {
+    const response = await fetch(url);
+    const text = await response.text();
+    try {
+      return JSON.parse(text);
+    } catch (error) {
+      console.error(`Error parsing JSON from ${url}:`, text);
+      throw error;
+    }
+  };
+
+  const searchedCrochets = await fetchAndLog(`${process.env.NEXT_PUBLIC_API_URL}/search/crochets/${query}`);
+  const searchedDrawings = await fetchAndLog(`${process.env.NEXT_PUBLIC_API_URL}/search/drawings/${query}`);
+  const searchedJewelries = await fetchAndLog(`${process.env.NEXT_PUBLIC_API_URL}/search/jewelries/${query}`);
+  const searchedPaintings = await fetchAndLog(`${process.env.NEXT_PUBLIC_API_URL}/search/paintings/${query}`);
+  const searchedTattoos = await fetchAndLog(`${process.env.NEXT_PUBLIC_API_URL}/search/tattoos/${query}`);
+  const searchedWearables = await fetchAndLog(`${process.env.NEXT_PUBLIC_API_URL}/search/wearables/${query}`);
+  const searchedWoodBurnings = await fetchAndLog(`${process.env.NEXT_PUBLIC_API_URL}/search/woodburnings/${query}`);
 
   return [
     ...searchedCrochets,
