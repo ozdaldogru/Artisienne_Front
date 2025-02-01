@@ -8,12 +8,8 @@ const getCrochetDetails = async (crochetId: string) => {
   return await crochet.json()
 }
 
- const getSearchedCrochets = async (query: string) => {
-  const searchedCrochets = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
-  return searchedCrochets.json()
-}
 
-export {getCrochets, getCrochetDetails, getSearchedCrochets };
+export {getCrochets, getCrochetDetails };
 
 const getDrawings = async () => {
   const drawings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/drawings`)
@@ -25,12 +21,7 @@ const getDrawingDetails = async (crochetId: string) => {
   return await drawing.json()
 }
 
- const getSearchedDrawings = async (query: string) => {
-  const searchedDrawings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
-  return searchedDrawings.json()
-}
-
-export {getDrawings, getDrawingDetails, getSearchedDrawings };
+export {getDrawings, getDrawingDetails };
 
 const getJewelries = async () => {
   const jewelries = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/jewelries`)
@@ -42,13 +33,8 @@ const getJewelryDetails = async (jewelryId: string) => {
   return await jewelry.json()
 }
 
- const getSearchedJewelries = async (query: string) => {
-  const searchedJewelries = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
-  return searchedJewelries.json()
-}
 
-
-export {getJewelries, getJewelryDetails, getSearchedJewelries };
+export {getJewelries, getJewelryDetails };
 
 
 
@@ -62,13 +48,8 @@ const getPaintingDetails = async (paintingId: string) => {
   return await painting.json()
 }
 
- const getSearchedPaintings = async (query: string) => {
-  const searchedPaintings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
-  return searchedPaintings.json()
-}
 
-
-export {getPaintings, getPaintingDetails, getSearchedPaintings };
+export {getPaintings, getPaintingDetails };
 
 const getTattoos = async () => {
   const tattoos = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tattoos`)
@@ -80,13 +61,8 @@ const getTattooDetails = async (tattooId: string) => {
   return await tattoo.json()
 }
 
- const getSearchedTattoos = async (query: string) => {
-  const searchedTattoos = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
-  return searchedTattoos.json()
-}
 
-
-export {getTattoos, getTattooDetails, getSearchedTattoos };
+export {getTattoos, getTattooDetails };
 
 const getWearables = async () => {
   const wearables = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/wearables`)
@@ -98,13 +74,8 @@ const getWearableDetails = async (wearableId: string) => {
   return await wearable.json()
 }
 
- const getSearchedWearables = async (query: string) => {
-  const searchedWearables = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
-  return searchedWearables.json()
-}
 
-
-export {getWearables, getWearableDetails, getSearchedWearables };
+export {getWearables, getWearableDetails };
 
 const getWoodBurnings = async () => {
   const woodburnings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/woodburnings`)
@@ -116,10 +87,28 @@ const getWoodBurningDetails = async (woodburningId: string) => {
   return await wearable.json()
 }
 
- const getSearchedWoodBurnings = async (query: string) => {
-  const searchedWoodBurnings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
-  return searchedWoodBurnings.json()
-}
+
+export {getWoodBurnings, getWoodBurningDetails };
 
 
-export {getWoodBurnings, getWoodBurningDetails, getSearchedWoodBurnings };
+const getSearchedItems = async (query: string) => {
+  const searchedCrochets = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/crochets/${query}`).then(res => res.json());
+  const searchedDrawings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/drawings/${query}`).then(res => res.json());
+  const searchedJewelries = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/jewelries/${query}`).then(res => res.json());
+  const searchedPaintings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/paintings/${query}`).then(res => res.json());
+  const searchedTattoos = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/tattoos/${query}`).then(res => res.json());
+  const searchedWearables = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/wearables/${query}`).then(res => res.json());
+  const searchedWoodBurnings = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/woodburnings/${query}`).then(res => res.json());
+
+  return [
+    ...searchedCrochets,
+    ...searchedDrawings,
+    ...searchedJewelries,
+    ...searchedPaintings,
+    ...searchedTattoos,
+    ...searchedWearables,
+    ...searchedWoodBurnings,
+  ];
+};
+
+export { getSearchedItems };
