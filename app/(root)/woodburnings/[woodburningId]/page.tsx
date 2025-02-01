@@ -8,8 +8,9 @@ interface WoodBurningCardProps {
   woodburning: WoodBurningType;
 }
 
-const WoodBurningDetails = async ({ params }: { params: { woodburningId: string } }) => {
-  const woodburningDetails = await getWoodBurningDetails(params.woodburningId);
+const WoodBurningDetails = async ({ params }: { params: Promise<{ woodburningId: string }> }) => {
+  const { woodburningId } = await params;
+  const woodburningDetails = await getWoodBurningDetails(woodburningId);
 
   return (
     <>

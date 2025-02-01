@@ -8,8 +8,9 @@ interface WearableCardProps {
   wearable: WearableType;
 }
 
-const WearableDetails = async ({ params }: { params: { wearableId: string } }) => {
-  const wearableDetails = await getWearableDetails(params.wearableId);
+const WearableDetails = async ({ params }: { params: Promise<{ wearableId: string }> }) => {
+  const { wearableId } = await params;
+  const wearableDetails = await getWearableDetails(wearableId);
 
   return (
     <>

@@ -8,8 +8,9 @@ interface JewelryCardProps {
   jewelry: JewelryType;
 }
 
-const JewelryDetails = async ({ params }: { params: { jewelryId: string } }) => {
-  const jewelryDetails = await getJewelryDetails(params.jewelryId);
+const JewelryDetails = async ({ params }: { params: Promise<{ jewelryId: string }> }) => {
+  const { jewelryId } = await params;
+  const jewelryDetails = await getJewelryDetails(jewelryId);
 
   return (
     <>

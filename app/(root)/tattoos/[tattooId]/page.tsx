@@ -8,8 +8,9 @@ interface TattooCardProps {
   tattoo: TattooType;
 }
 
-const TattooDetails = async ({ params }: { params: { tattooId: string } }) => {
-  const tattooDetails = await getTattooDetails(params.tattooId);
+const TattooDetails = async ({ params }: { params: Promise<{ tattooId: string }> }) => {
+  const { tattooId } = await params;
+  const tattooDetails = await getTattooDetails(tattooId);
 
   return (
     <>

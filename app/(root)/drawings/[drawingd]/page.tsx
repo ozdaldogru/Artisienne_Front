@@ -8,8 +8,9 @@ interface DrawingCardProps {
   drawing: DrawingType;
 }
 
-const DrawingDetails = async ({ params }: { params: { drawingId: string } }) => {
-  const drawingDetails = await getDrawingDetails(params.drawingId);
+const DrawingDetails = async ({ params }: { params: Promise<{ drawingId: string }> }) => {
+  const { drawingId } = await params;
+  const drawingDetails = await getDrawingDetails(drawingId);
 
   return (
     <>

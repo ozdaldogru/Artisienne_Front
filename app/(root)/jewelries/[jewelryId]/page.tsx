@@ -7,7 +7,6 @@ import JewelryDescription from "@/components/Jewelries/JewelryDescription";
 
 const JewelryDetails = async (props: { params: Promise<{ jewelryId: string }>}) => {
   const params = await props.params;
-
   const jewelryDetails = await getJewelryDetails(params.jewelryId);
 
   return (
