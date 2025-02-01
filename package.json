@@ -9,17 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.9.1",
+    "@clerk/nextjs": "^6.10.6",
     "@emotion/react": "^11.14.0",
-    "framer-motion": "^12.0.3",
+    "framer-motion": "^12.0.6",
     "html-react-parser": "^5.2.2",
-    "lucide-react": "^0.468.0",
-    "mongoose": "^8.8.4",
-    "next": "^15.1.0",
+    "lucide-react": "^0.474.0",
+    "mongoose": "^8.9.6",
+    "next": "^15.1.6",
     "react": "^19.0.0",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^19.0.0",
-    "react-hot-toast": "^2.4.1",
+    "react-hot-toast": "^2.5.1",
     "react-icons": "^5.4.0",
     "tailwind-scrollbar-hide": "^2.0.0",
     "yet-another-react-lightbox": "^3.21.7"
