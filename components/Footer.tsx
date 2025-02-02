@@ -6,29 +6,10 @@ function Footer() {
         
       <div className="flex flex-wrap justify-center gap-16 max-[431px]:gap-4">
 
-            <div className="text-[#c0baba]">
-
-              <h2 className=" text-[24px] justify-center gap-2 text-bold text-center underline underline-offset-4 mb-5 max-[431px]:text-[20px]">Operation Hours:</h2>
-           
-              <ul className="flex flex-col px-02 px-4">
-                <li className=" flex flex-col text-center">
-                  <p className="text-green-900-bold transition " > Monday- Saturday: </p>
-                  <p className="text-green-900-bold transition  justify-right" > 09:00a.m.-08:00p.m. </p>
-                </li>
-
-
-                <li className=" flex flex-col text-center">
-                  <p className="text-green-900-bold transition "> Sunday: </p>
-                  <p className="text-green-900-bold transition " > 09:00a.m.-03:00p.m. </p>
-                </li>
-              </ul>
-
-            </div>
             <div>
             <div className="text-[#c0baba] flex flex-col ">   
-                <h2 className=" text-[24px] justify-center gap-2 text-bold underline underline-offset-4 mb-5 max-[431px]:text-[20px] text-center">Contact Us:</h2>   
+                <h2 className=" text-[24px] justify-center gap-2 text-bold underline underline-offset-4 mb-5 max-[431px]:text-[20px] text-center">Contact Me:</h2>   
                 <div className="flex flex-col justify-center text-[19px] max-[431px]:text-[15px]">   
-                  <a href="tel:14375056334" className="text-center  hover:text-green-700" target="blank">+1-437-505-63-34</a>    
                   <a href="mailto:info@artisienne.ca" className="text-center hover:text-red-700" target="blank">info@artisienne.ca</a>
  
               </div>
@@ -40,27 +21,10 @@ function Footer() {
 
             
             <ul className="mt-6 flex justify-center gap-6 md:gap-8">
+       
               <li>
                 <a
-                  href="https://www.facebook.com/profile.php?id=61571836432279"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-[#c0baba] transition hover:text-blue-700"
-                >
-                  <span className="sr-only">Facebook</span>
-                  <svg className="h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      fillRule="evenodd"
-                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
-              </li>
-        
-              <li>
-                <a
-                  href="#"
+                  href="https://www.instagram.com/alisacolours/"
                   rel="noreferrer"
                   target="_blank"
                   className="text-[#c0baba] transition hover:text-orange-700/75"
@@ -84,10 +48,6 @@ function Footer() {
 
 
             </div>
-            <div className="rounded-lg sm:h-[88px] sm:w-[88px]">
-              <GoogleMaps />
-            </div>
-
       </div>
 
           <div className="text-[#c0baba] flex justify-center py-4">
