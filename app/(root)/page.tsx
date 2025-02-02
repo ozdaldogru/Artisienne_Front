@@ -11,20 +11,43 @@ export default function Home() {
           <Slider />
         </div>
 
+        
+        <div className="items-center justify-center flex flex-row flex-wrap text-[50px]" > Categories</div>
+        <div className="items-center justify-center text-center flex flex-row flex-wrap text-[20px] gap-8" >
+
+              <div className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md " >
+                <a href="/crochets" target="blank"><button>Crochets</button></a>
+              </div>
+              <div className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md " >
+                <a href="/crochets" target="blank"><button>Drawings</button></a>
+              </div>
+              <div className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md " >
+                <a href="/crochets" target="blank"><button>Jewelries</button></a>
+              </div>
+              <div className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md " >
+                <a href="/crochets" target="blank"><button>Paintings</button></a>
+              </div>
+              <div className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md " >
+                <a href="/crochets" target="blank"><button>Tattoos</button></a>
+              </div>
+              <div className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md " >
+                <a href="/crochets" target="blank"><button>Wearables</button></a>
+              </div>
+              <div className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md " >
+                <a href="/crochets" target="blank"><button>Wood Burnings</button></a>
+              </div>
+          
+        </div>
+
+
+
+
         <div className="items-center justify-center grid grid-col-3 text-[50px]" >
           <h1>Recently Added</h1>
         </div>
-        <div className="flex flew-wrap flex-row gap-4 justify-center object-fill border-b-2">
-          <button><a href="/crochets" target="blank">Crochets</a></button>
-          <button><a href="/drawings" target="blank"></a>Drawings</button>
-          <button><a href="/jewelries" target="blank"></a>Jewelries</button>
-          <button><a href="/paintings" target="blank">Paintings</a></button>
-          <button><a href="/tattoos" target="blank">Tattoos</a></button>
-          <button><a href="/wearables" target="blank">Wearables</a></button>
-          <button><a href="/woodburnings" target="blank">Wood Burnings</a></button>
 
-        </div>
         <CrochetList />
+        
       </div>
     </>
   );
