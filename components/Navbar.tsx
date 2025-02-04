@@ -85,7 +85,7 @@ const Navbar = () => {
                       )}
                  </div>
                  <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a> 
-                 <div ><Dropdown/></div>
+                 <div className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500"><Dropdown/></div>
                  <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
                  <a href="/aboutme" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">About Me</a>
                 </div>
@@ -102,7 +102,7 @@ const Navbar = () => {
           
         <div className='flex flex-col justify-between items-center text-center gap-3 basis-full '>
             <Link href='/' className="w-[250px] shadow-sm rounded-md hover:bg-red-500" onClick={() => setIsOpen(!isOpen)}>Home</Link>
-            <div ><DropdownItem/></div>
+            <div className="w-[250px] shadow-sm rounded-md hover:bg-red-500"><DropdownItem/></div>
             <Link href='/contact' className="w-[250px] shadow-sm rounded-md hover:bg-red-500" onClick={() => setIsOpen(!isOpen)}>Contact</Link>
             <Link href='/aboutme' className="w-[250px] shadow-sm rounded-md hover:bg-red-500" onClick={() => setIsOpen(!isOpen)}>About Me</Link>
             <div className="flex items-center justify-center">

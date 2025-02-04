@@ -7,9 +7,9 @@ const DropdownItem = () => {
     const contentRef = useRef<HTMLDivElement>(null);
 
     return (
-        <div className='overflow-hidden w-[250px] shadow-sm rounded-md hover:bg-red-500 hover:bg-red-500'>
+        <div className='overflow-hidden w-[250px] shadow-sm rounded-md hover:bg-red-500'>
             <button
-            className='w-full text-center px-4 py-2 focus:outline-none'
+            className='w-full text-center px-4 py-2 focus:outline-none '
             onClick={() => setIsOpen(!isOpen)}
             >Inventories</button>
             <div
